@@ -1,0 +1,190 @@
+
+/* ======================================
+   GENERAL STYLING
+====================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ======================================
+   HEADER AND NAVIGATION
+====================================== */
+
+header {
+    background: #17365d;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header h1 {
+    font-size: 22px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ======================================
+   MAIN CONTAINER
+====================================== */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.page-heading {
+    margin-bottom: 25px;
+}
+
+.page-heading h2 {
+    color: #17365d;
+    margin-bottom: 5px;
+}
+
+.page-heading p {
+    color: #666;
+}
+
+/* ======================================
+   STUDENT FORM
+====================================== */
+
+.form-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.form-card h3 {
+    color: #17365d;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.form-card h3:not(:first-child) {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    font-size: 14px;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+/* ======================================
+   BUTTONS
+====================================== */
+
+button {
+    background: #17365d;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #24558c;
+}
+
+button:disabled {
+    background: #8998a8;
+    cursor: not-allowed;
+}
+
+/* ======================================
+   FORM MESSAGES
+====================================== */
+
+#formMessage {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.success-message {
+    color: #15803d;
+}
+
+.error-message {
+    color: #dc2626;
+}
+
+/* ======================================
+   RESPONSIVE DESIGN
+====================================== */
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .container {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+}
