@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student | Student Assessment System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Assessment System</h1>
+
+        <nav>
+            <a href="add-student.html">Add Student</a>
+            <a href="students.html">View Students</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="page-heading">
+            <h2>Register New Student</h2>
+            <p>Enter the student's personal and academic details below.</p>
+        </section>
+
+        <section class="form-card">
+
+            <form id="studentForm">
+
+                <h3>Personal Information</h3>
+
+                <div class="form-group">
+                    <label for="first_name">First Name *</label>
+                    <input
+                        type="text"
+                        id="first_name"
+                        name="first_name"
+                        placeholder="Enter first name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="last_name">Last Name *</label>
+                    <input
+                        type="text"
+                        id="last_name"
+                        name="last_name"
+                        placeholder="Enter last name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="date_of_birth">Date of Birth</label>
+                    <input
+                        type="date"
+                        id="date_of_birth"
+                        name="date_of_birth"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter email address"
+                    >
+                </div>
+
+                <h3>Academic Information</h3>
+
+                <div class="form-group">
+                    <label for="registration_number">Registration Number *</label>
+                    <input
+                        type="text"
+                        id="registration_number"
+                        name="registration_number"
+                        placeholder="e.g. BIT/24/SS/001"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender *</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Select gender</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="year_of_study">Year of Study *</label>
+                    <select id="year_of_study" name="year_of_study" required>
+                        <option value="">Select year</option>
+                        <option value="1">Year 1</option>
+                        <option value="2">Year 2</option>
+                        <option value="3">Year 3</option>
+                        <option value="4">Year 4</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="programme_id">Programme *</label>
+                    <select id="programme_id" name="programme_id" required>
+                        <option value="">Loading programmes...</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submitButton">
+                    Register Student
+                </button>
+
+                <p id="formMessage" role="status"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="js/add-student.js"></script>
+
+</body>
+</html>
