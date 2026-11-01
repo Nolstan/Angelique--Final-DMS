@@ -1,11 +1,19 @@
+
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
+
 const pool = require('./db');
+const studentRoutes = require('./routes/studentRoutes');
 
 const app = express();
 
+// Middleware
 app.use(cors());
 app.use(express.json());
+
+// Serve frontend files
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Test database connection
 app.get('/api/test-db', async (req, res) => {
@@ -35,6 +43,9 @@ app.get('/api/test-db', async (req, res) => {
         if (connection) connection.release();
     }
 });
+
+// Student routes
+app.use('/api/students', studentRoutes);
 
 const PORT = process.env.PORT || 5000;
 
