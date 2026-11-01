@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Students | Student Assessment System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Assessment System</h1>
+
+        <nav>
+            <a href="add-student.html">Add Student</a>
+            <a href="students.html">View Students</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="page-heading">
+            <h2>Registered Students</h2>
+            <p>View all students registered in the system.</p>
+        </section>
+
+        <section class="student-summary">
+            <div class="summary-card">
+                <h3 id="totalStudents">0</h3>
+                <p>Total Students</p>
+            </div>
+        </section>
+
+        <section class="table-card">
+
+            <div class="table-heading">
+                <h3>Student Records</h3>
+
+                <button id="refreshButton" type="button">
+                    Refresh Records
+                </button>
+            </div>
+
+            <p id="tableMessage"></p>
+
+            <div class="table-wrapper">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Registration Number</th>
+                            <th>Full Name</th>
+                            <th>Gender</th>
+                            <th>Programme</th>
+                            <th>Year of Study</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="studentsTableBody">
+                        <tr>
+                            <td colspan="6">Loading students...</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/students.js"></script>
+
+</body>
+</html>
